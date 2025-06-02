@@ -167,6 +167,59 @@ a:hover, a:focus {
   background: #fff;
 }
 
+nav {
+  border-right: 2px solid #fff;
+  background: #181818;
+}
+
+main {
+  border-left: 2px solid #bdbdbd;
+  background: #232323;
+}
+
+body {
+  display: flex;
+  flex-direction: row;
+  min-height: 100vh;
+  height: 100vh;
+  overflow: hidden; /* Impede rolagem global */
+}
+
+nav {
+  overflow-y: auto;
+  height: 100vh;
+  max-height: 100vh;
+  /* Barra de rolagem personalizada */
+  scrollbar-width: thin;
+  scrollbar-color: #fff #181818;
+}
+main {
+  flex: 1;
+  overflow-y: auto;
+  height: 100vh;
+  max-height: 100vh;
+  /* Barra de rolagem personalizada */
+  scrollbar-width: thin;
+  scrollbar-color: #bdbdbd #232323;
+}
+
+/* Chrome, Edge, Safari */
+nav::-webkit-scrollbar {
+  width: 8px;
+  background: #181818;
+}
+nav::-webkit-scrollbar-thumb {
+  background: #fff;
+  border-radius: 8px;
+}
+main::-webkit-scrollbar {
+  width: 8px;
+  background: #232323;
+}
+main::-webkit-scrollbar-thumb {
+  background: #bdbdbd;
+  border-radius: 8px;
+}
 @keyframes fadeInDown {
   from { opacity: 0; transform: translateY(-40px);}
   to { opacity: 1; transform: translateY(0);}
